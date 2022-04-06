@@ -12,8 +12,8 @@ def get_temperature_readings(min_value,max_value,no_of_samples):
     
 def celcius_to_Farenheit_convertor(temperature_samples):
     fah_temperature_samples=[]
-    for i in temperature_samples:
-        fah_temperature_samples.append(round(((temperature * 1.8) + 32),2))
+    for sample in temperature_samples:
+        fah_temperature_samples.append(round(((sample * 1.8) + 32),2))
     return fah_temperature_samples
 
 def get_charge_rate_readings(min_value,max_value,no_of_samples):
