@@ -24,6 +24,12 @@ def get_charge_rate_readings(min_value,max_value,no_of_samples):
 def display_samples_on_console(min_value,max_value,no_of_samples):
     fah_temperature_samples=get_temperature_readings(min_value,max_value,no_of_samples)
     charge_rate_samples=get_charge_rate_readings(min_value,max_value,no_of_samples)
-    message="The temperature readings{}, and charge_rate readings {}".format(fah_temperature_samples,charge_rate_samples)
+    message=format_samples(fah_temperature_samples,charge_rate_samples)
     return message
+
+    
+def format_samples(fah_temperature_samples,charge_rate_samples):
+    return "The temperature readings{}, and charge_rate readings {}".format(fah_temperature_samples,charge_rate_samples)
+    
+    
     
