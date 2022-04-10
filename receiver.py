@@ -20,6 +20,7 @@ def getMaximumtemperature(temperature):
 def getDatafromConsoleOutput():
   for line in sys.stdin:
     temperature = []
+    temperature1 = []
     charge_rate = []
     line=line.split(',')
     index=0
@@ -37,7 +38,7 @@ def getDatafromConsoleOutput():
     maximum_temperature = getMaximumtemperature(temperature)
     minimum_temperature = getMinimumtemperature(temperature)
     for i in range(len(temperature)):
-      print(temperature[i][0])
+      temperature1.append(temperature[i][0])
 
 if __name__ == '__main__':
   getDatafromConsoleOutput()
