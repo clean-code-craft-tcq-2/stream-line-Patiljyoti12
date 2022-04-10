@@ -1,3 +1,4 @@
+from sender1 import *
 import sys
 
 def getDatafromConsoleOutput():
