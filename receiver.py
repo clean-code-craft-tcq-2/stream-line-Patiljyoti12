@@ -3,25 +3,8 @@ import sys
 
 def getDatafromConsoleOutput():
   for line in sys.stdin:
-    line=line.split(',')
-    for character in line:
-      if "temperature" in character:
-        index=0
-        while (character[index]!= '['):
-          character = list(character)
-          del(character[index])
-          index=index+1
-        del(character[index])
-        print(character)
-      elif "charge_rate" in character:
-        index=0
-        while (character[index]!= '['):
-          character = list(character)
-          del(character[index])
-          index=index+1
-        del(character[index])
-        print(character)
-        
-        
+    line=line.split('[',']')
+    print(line)
+
 if __name__ == '__main__':
   getDatafromConsoleOutput()
