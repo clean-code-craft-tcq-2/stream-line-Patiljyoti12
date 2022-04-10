@@ -14,5 +14,6 @@ def test_chjarge_rate_readings(self):
     self.assertEqual(len(sender1.get_charge_rate_readings(30,120,50)==50))
    
 if __name__ == '__main__':
+  display_samples_on_console(20,80,50)
   unittest.main()
     
