@@ -38,7 +38,7 @@ def getDatafromConsoleOutput():
     minimum_temperature = getMinimumtemperature(temperature)
     print(maximum_temperature)
     print(minimum_temperature)
-    print(float(temperature[0]))
+    print(temperature[1][0])
 
 if __name__ == '__main__':
   getDatafromConsoleOutput()
