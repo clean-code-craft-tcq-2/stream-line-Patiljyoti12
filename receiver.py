@@ -3,18 +3,18 @@ import sys
 import re
 
 def getMinimumtemperature(temperature):
-  minimum_temperature = float(temperature[0])
+  minimum_temperature = temperature[0]
   for i in range(len(temperature)):
-    if minimum_temperature>float(temperature[i]):
-      minimum_temperature = float(temperature[i])
+    if minimum_temperature>temperature[i]:
+      minimum_temperature = temperature[i]
   return minimum_temperature
 
 
 def getMaximumtemperature(temperature):
-  maximum_temperature = float(temperature[0])
+  maximum_temperature = temperature[0]
   for i in range(len(temperature)):
-    if maximum_temperature<float(temperature[i]):
-      maximum_temperature = float(temperature[i])
+    if maximum_temperature<temperature[i]:
+      maximum_temperature = temperature[i]
   return maximum_temperature
 
 def getMinimumChargeRate(charge_rate):
@@ -48,7 +48,6 @@ def getDatafromConsoleOutput():
     minimum_charge_rate = getMinimumChargeRate(charge_rate1)
     maximum_temperature = getMaximumtemperature(temperature1)
     minimum_temperature = getMinimumtemperature(temperature1)
-    print(maximum_charge_rate+minimum_charge_rate)
             
 if __name__ == '__main__':
   getDatafromConsoleOutput()
