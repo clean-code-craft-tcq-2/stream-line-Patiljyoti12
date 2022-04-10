@@ -17,13 +17,12 @@ def getMaximumtemperature(temperature):
       maximum_temperature = float(temperature[i])
   return maximum_temperature
 
-def getMinimumChargeRate():
-  minimum_chargeRate = float(temperature[0])
-  for i in range(len(temperature)):
-    if minimum_temperature>float(temperature[i]):
-      minimum_temperature = float(temperature[i])
-  return minimum_temperature
+def getMinimumChargeRate(charge_rate):
+  reurn min(charge_rate)
 
+def getMaximumChargeRate(charge_rate):
+  reurn max(charge_rate)
+  
 def getDatafromConsoleOutput():
   for line in sys.stdin:
     temperature = []
@@ -45,8 +44,8 @@ def getDatafromConsoleOutput():
       temperature1.append(temperature[i][0])
     for i in range(len(charge_rate)):
       charge_rate1.append(charge_rate[i][0])
-    maximum_charge_rate = max(charge_rate1)
-    minimum_charge_rate = min(charge_rate1)
+    maximum_charge_rate = getMaximumChargeRate(charge_rate1)
+    minimum_charge_rate = getMinimumChargeRate(charge_rate1)
     maximum_temperature = getMaximumtemperature(temperature1)
     minimum_temperature = getMinimumtemperature(temperature1)
     print(maximum_charge_rate)
