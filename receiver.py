@@ -25,8 +25,13 @@ def getMaximumChargeRate(charge_rate):
 
 def appendNewListWithFloatValue(batteryParameterOld,batteryParameterNew):
   for i in range(len(batteryParameterOld)):
-      batteryParameterNew.append(float(batteryParameterOld[i][0]))
+    batteryParameterNew.append(float(batteryParameterOld[i][0]))
   return batteryParameterNew
+
+def filterBatteryParameterValue(batteryParameter):
+  for index in range(len(batteryParameter)):
+    batteryParameter[index]=re.findall(r"[-+]?\d*\.\d+|\d+", batteryParameter[index])
+  return batteryParameter
       
 def getDatafromConsoleOutput():
   for line in sys.stdin:
@@ -42,9 +47,8 @@ def getDatafromConsoleOutput():
         index = index+1
       for i in range(index,len(line)):
         charge_rate.append(line[i])
-    for i in range(len(temperature)):
-      temperature[i]=re.findall(r"[-+]?\d*\.\d+|\d+", temperature[i])
-      charge_rate[i]=re.findall(r"[-+]?\d*\.\d+|\d+", charge_rate[i])
+    temperature=filterBatteryParameterValue(temperature)
+    charge_rate=filterBatteryParameterValue(charge_rate)
     temperature1 = appendNewListWithFloatValue(temperature,temperature1)
     charge_rate1 = appendNewListWithFloatValue(charge_rate,charge_rate1)
     maximum_charge_rate = getMaximumChargeRate(charge_rate1)
