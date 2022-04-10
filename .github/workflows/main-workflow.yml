@@ -41,3 +41,6 @@ jobs:
       
       - name: Run
         run: python sender_test1.py | python receiver.py
+      
+      - name: run
+        run: python receiver_test.py 
