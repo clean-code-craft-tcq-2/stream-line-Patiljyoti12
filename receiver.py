@@ -7,7 +7,7 @@ def getDatafromConsoleOutput():
     for character in line:
       if character.find("temperature"):
         print(character)
-      elseif character.find("charge_rate"):
+      elif character.find("charge_rate"):
         print(character)
         
 if __name__ == '__main__':
