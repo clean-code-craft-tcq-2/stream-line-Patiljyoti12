@@ -3,4 +3,4 @@ import sys
 
 def getDatafromConsoleOutput():
   for line in sys.stdin:
-    print(line)
+    print('Ramnath')
