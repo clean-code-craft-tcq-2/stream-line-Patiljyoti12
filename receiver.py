@@ -1,5 +1,6 @@
 from sender1 import *
 import sys
+import re
 
 def getDatafromConsoleOutput():
   for line in sys.stdin:
@@ -15,6 +16,9 @@ def getDatafromConsoleOutput():
         charge_rate.append(line[i])
     print(temperature)
     print(charge_rate)
+    for i in range(len(temperature)):
+      temperature[i] = re.findall(temperature[i])
+    print(temperature)
       
 
 if __name__ == '__main__':
