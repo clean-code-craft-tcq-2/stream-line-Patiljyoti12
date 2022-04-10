@@ -14,11 +14,11 @@ def getDatafromConsoleOutput():
         index = index+1
       for i in range(index,len(line)):
         charge_rate.append(line[i])
-    print(temperature)
-    print(charge_rate)
     for i in range(len(temperature)):
       temperature[i] = re.findall(r"[-+]?\d*\.\d+|\d+", temperature[i])
+      charge_rate[i] = re.findall(r"[-+]?\d*\.\d+|\d+", charge_rate[i])
     print(temperature)
+    print(charge_rate)
       
 
 if __name__ == '__main__':
