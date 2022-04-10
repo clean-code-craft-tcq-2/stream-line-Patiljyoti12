@@ -3,7 +3,7 @@ import sys
 
 def getDatafromConsoleOutput():
   for line in sys.stdin:
-    line=line.split(',')
+    line=line.split(',','[',']')
     for character in line:
       if "temperature" in character:
         for i in character:
