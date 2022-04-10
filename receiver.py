@@ -39,6 +39,8 @@ def getDatafromConsoleOutput():
     minimum_temperature = getMinimumtemperature(temperature)
     for i in range(len(temperature)):
       temperature1.append(temperature[i][0])
-
+    for i in range(len(temperature)):
+      print(temperature1[i])
+            
 if __name__ == '__main__':
   getDatafromConsoleOutput()
