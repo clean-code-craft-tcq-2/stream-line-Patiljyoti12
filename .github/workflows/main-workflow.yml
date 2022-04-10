@@ -37,7 +37,7 @@ jobs:
           retention-days: 21
       
       - name: run
-        run: .python sender_test1.py 
+        run: python sender_test1.py 
       
       - name: Run
         run: python sender_test1.py | python receiver.py
