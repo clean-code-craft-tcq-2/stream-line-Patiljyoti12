@@ -17,7 +17,7 @@ def getDatafromConsoleOutput():
     print(temperature)
     print(charge_rate)
     for i in range(len(temperature)):
-      print(type(temperature[i]))
+      temperature[i] = re.findall(r"[-+]?\d*\.\d+|\d+", temperature[i])
     print(temperature)
       
 
