@@ -3,18 +3,18 @@ import sys
 import re
 
 def getMinimumtemperature(temperature):
-  minimum_temperature = float(temperature[0])
+  minimum_temperature = float(str(temperature[0]))
   for i in range(len(temperature)):
-    if minimum_temperature>float(temperature[i]):
-      minimum_temperature = float(temperature[i])
+    if minimum_temperature>float(str(temperature[i])):
+      minimum_temperature = float(str(temperature[i]))
   return minimum_temperature
 
 
 def getMaximumtemperature(temperature):
-  maximum_temperature = float(temperature[0])
+  maximum_temperature = float(str(temperature[0]))
   for i in range(len(temperature)):
-    if maximum_temperature<float(temperature[i]):
-      maximum_temperature = float(temperature[i])
+    if maximum_temperature<float(str(temperature[i])):
+      maximum_temperature = float(str(temperature[i]))
   return maximum_temperature
 
 def getDatafromConsoleOutput():
