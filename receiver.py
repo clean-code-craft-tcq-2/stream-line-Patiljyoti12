@@ -5,9 +5,7 @@ def getDatafromConsoleOutput():
   for line in sys.stdin:
     line=line.split(',')
     for character in line:
-      if(character.isalpha()):
-        character.split()
-        print(character)
+      print(character)
         
 if __name__ == '__main__':
   getDatafromConsoleOutput()
