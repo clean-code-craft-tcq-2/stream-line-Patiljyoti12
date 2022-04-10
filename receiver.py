@@ -6,10 +6,10 @@ def getDatafromConsoleOutput():
     line=line.split(',')
     for character in line:
       if "temperature" in character:
-        for i in characetr:
+        for i in character:
           print(i)
       elif "charge_rate" in character:
-        for i in characetr:
+        for i in character:
           print(i)  
         
 if __name__ == '__main__':
