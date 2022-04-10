@@ -35,3 +35,6 @@ jobs:
           name: coverage
           path: ./htmlcov
           retention-days: 21
+          
+      - name: Run
+          run: sender_test1.py | receiver.py
