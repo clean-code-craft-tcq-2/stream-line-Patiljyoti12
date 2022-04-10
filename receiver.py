@@ -8,7 +8,7 @@ def getDatafromConsoleOutput():
       if "temperature" in character:
         index=0
         while (character[index]!= '['):
-          list(character)
+          character = list(character)
           del(character[index])
           index=index+1
         del(character[index])
@@ -16,7 +16,7 @@ def getDatafromConsoleOutput():
       elif "charge_rate" in character:
         index=0
         while (character[index]!= '['):
-          list(character)
+          character = list(character)
           del(character[index])
           index=index+1
         del(character[index])
