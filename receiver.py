@@ -21,6 +21,8 @@ def getDatafromConsoleOutput():
     minimum_temperature = min(temperature)
     maximum_charge_rate = max(charge_rate)
     minimum_charge_rate = min(charge_rate)
+    print(temperature)
+    print(charge_rate)
     print(maximum_temperature)
     print(minimum_temperature)
     print(maximum_charge_rate)
