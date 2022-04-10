@@ -9,14 +9,14 @@ def getDatafromConsoleOutput():
         index=0
         while (character[index]!= '['):
           character.pop(index)
-          index++
+          index=index+1
         character.pop(index)
         print(character)
       elif "charge_rate" in character:
         index=0
         while (character[index]!= '['):
           character.pop(index)
-          index++
+          index=index+1
         character.pop(index)
         print(character)
         
