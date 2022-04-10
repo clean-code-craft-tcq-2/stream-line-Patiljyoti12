@@ -2,6 +2,21 @@ from sender1 import *
 import sys
 import re
 
+def getMinimumtemperature(temperature):
+  minimum_temperature = temperature[0]
+  for i in range(len(temperature)):
+    if minimum_temperature>temperature[i]:
+      minimum_temperature = temperature[i]
+  return minimum_temperature
+
+
+def getMaximumtemperature(temperature):
+  maximum_temperature = temperature[0]
+  for i in range(len(temperature)):
+    if maximum_temperature<temperature[i]:
+      maximum_temperature = temperature[i]
+  return maximum_temperature
+
 def getDatafromConsoleOutput():
   for line in sys.stdin:
     temperature = []
@@ -19,8 +34,8 @@ def getDatafromConsoleOutput():
       charge_rate[i] = re.findall(r"[-+]?\d*\.\d+|\d+", charge_rate[i])
     maximum_charge_rate = max(charge_rate)
     minimum_charge_rate = min(charge_rate)
-    minimum_temperature = min(temperature,key=lambda x:float(x))
-    maximum_temperature = max(temperature,key=lambda x:float(x))
+    minimum_temperature = getMinimumtemperature(temperature)
+    maximum_temperature = getMaximumtemperature(temperature)
     print(maximum_temperature)
     print(minimum_temperature)
 
