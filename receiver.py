@@ -4,6 +4,7 @@ import sys
 def getDatafromConsoleOutput():
   for line in sys.stdin:
     temperature =[]
+    print(line)
     line=line.split('[')
     print(line)
 
