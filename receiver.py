@@ -11,7 +11,7 @@ def getDatafromConsoleOutput():
       while(not("charge_rate" in line[index])):
         temperature.append(line[index])
         index = index+1
-      for i in range(index-1,len(line)):
+      for i in range(index,len(line)):
         charge_rate.append(line[i])
     print(temperature)
     print(charge_rate)
