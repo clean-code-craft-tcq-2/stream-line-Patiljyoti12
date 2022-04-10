@@ -8,7 +8,7 @@ def getDatafromConsoleOutput():
       if "temperature" in character:
         index=0
         while (character[index]!= '['):
-          del(character(index))
+          del(character[index])
           index=index+1
         del(character[index])
         print(character)
