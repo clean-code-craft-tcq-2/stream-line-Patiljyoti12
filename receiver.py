@@ -22,6 +22,7 @@ def getDatafromConsoleOutput():
     temperature = []
     temperature1 = []
     charge_rate = []
+    charge_rate1 = []
     line=line.split(',')
     index=0
     if "temperature" in line[index]:
@@ -31,13 +32,13 @@ def getDatafromConsoleOutput():
       for i in range(index,len(line)):
         charge_rate.append(line[i])
     for i in range(len(temperature)):
-      temperature[i] = re.findall(r"[-+]?\d*\.\d+|\d+", temperature[i])
-      charge_rate[i] = re.findall(r"[-+]?\d*\.\d+|\d+", charge_rate[i])
+      temperature1[i] = re.findall(r"[-+]?\d*\.\d+|\d+", temperature[i])
+      charge_rate1[i] = re.findall(r"[-+]?\d*\.\d+|\d+", charge_rate[i])
     maximum_charge_rate = max(charge_rate)
     minimum_charge_rate = min(charge_rate)
     print(maximum_charge_rate)
     print(minimum_charge_rate)
-    print(temperature[1][1])
+    print(temperature1)
 
 if __name__ == '__main__':
   getDatafromConsoleOutput()
