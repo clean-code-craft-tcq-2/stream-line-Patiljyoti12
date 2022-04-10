@@ -36,7 +36,7 @@ def getDatafromConsoleOutput():
     minimum_charge_rate = min(charge_rate)
     print(maximum_charge_rate)
     print(minimum_charge_rate)
-    print(temperature)
+    print(temperature[0][0])
 
 if __name__ == '__main__':
   getDatafromConsoleOutput()
