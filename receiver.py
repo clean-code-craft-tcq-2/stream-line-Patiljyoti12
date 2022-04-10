@@ -18,10 +18,10 @@ def getMaximumtemperature(temperature):
   return maximum_temperature
 
 def getMinimumChargeRate(charge_rate):
-  reurn min(charge_rate)
+  return min(charge_rate)
 
 def getMaximumChargeRate(charge_rate):
-  reurn max(charge_rate)
+  return max(charge_rate)
   
 def getDatafromConsoleOutput():
   for line in sys.stdin:
