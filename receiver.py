@@ -44,21 +44,21 @@ def segregateTemperatureandChargerate(line,temperature,charge_rate):
   return temperature,charge_rate
 
 def getDatafromConsoleOutput():
-  line = sys.stdin
-  temperature = []
-  temperature1 = []
-  charge_rate = []
-  charge_rate1 = []
-  line=line.split(',')
-  temperature,charge_rate = segregateTemperatureandChargerate(line,temperature,charge_rate)
-  temperature=filterBatteryParameterValue(temperature)
-  charge_rate=filterBatteryParameterValue(charge_rate)
-  temperature1 = appendNewListWithFloatValue(temperature,temperature1)
-  charge_rate1 = appendNewListWithFloatValue(charge_rate,charge_rate1)
-  maximum_charge_rate = getMaximumChargeRate(charge_rate1)
-  minimum_charge_rate = getMinimumChargeRate(charge_rate1)
-  maximum_temperature = getMaximumtemperature(temperature1)
-  minimum_temperature = getMinimumtemperature(temperature1)
+  for line in sys.stdin:
+    temperature = []
+    temperature1 = []
+    charge_rate = []
+    charge_rate1 = []
+    line=line.split(',')
+    temperature,charge_rate = segregateTemperatureandChargerate(line,temperature,charge_rate)
+    temperature=filterBatteryParameterValue(temperature)
+    charge_rate=filterBatteryParameterValue(charge_rate)
+    temperature1 = appendNewListWithFloatValue(temperature,temperature1)
+    charge_rate1 = appendNewListWithFloatValue(charge_rate,charge_rate1)
+    maximum_charge_rate = getMaximumChargeRate(charge_rate1)
+    minimum_charge_rate = getMinimumChargeRate(charge_rate1)
+    maximum_temperature = getMaximumtemperature(temperature1)
+    minimum_temperature = getMinimumtemperature(temperature1)
             
 if __name__ == '__main__':
   getDatafromConsoleOutput()
