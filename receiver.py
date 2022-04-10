@@ -6,9 +6,9 @@ def getDatafromConsoleOutput():
     line=line.split(',')
     for character in line:
       if "temperature" in character:
-        print(character)
+        print(character.isdigit())
       elif "charge_rate" in character:
-        print(character)
+        print(character.isdigit())
         
 if __name__ == '__main__':
   getDatafromConsoleOutput()
