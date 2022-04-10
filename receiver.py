@@ -2,6 +2,7 @@ from sender1 import *
 import sys
 
 def getDatafromConsoleOutput():
-  for line in sys.stdin:
-    line=line.strip()
-  return line
+  if(sys.stdin):
+    print('data available')
+  else:
+    print('data not available')
