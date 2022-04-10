@@ -1,4 +1,4 @@
-import sender1
+from sender1 import *
 import unittest
 
 def test_generate_samples(self):
