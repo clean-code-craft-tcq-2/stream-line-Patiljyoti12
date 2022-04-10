@@ -41,7 +41,7 @@ def segregateTemperatureandChargerate(line,temperature,charge_rate):
       index = index+1
     for i in range(index,len(line)):
       charge_rate.append(line[i])
-  return temperature,charge_Rate
+  return temperature,charge_rate
 
 def getDatafromConsoleOutput():
   for line in sys.stdin:
