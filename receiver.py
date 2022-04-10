@@ -7,7 +7,7 @@ def getDatafromConsoleOutput():
     line=line.split(',')
     index=0
     if "temperature" in line[index]:
-      while(!("charge_rate" in line[index])):
+      while(not("charge_rate" in line[index])):
         temperature.append(line[index])
         index = index+1
     print(temperature)
