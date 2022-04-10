@@ -69,7 +69,7 @@ def getDatafromConsoleOutput():
     minimum_charge_rate = getMinimumChargeRate(charge_rate1)
     maximum_temperature = getMaximumtemperature(temperature1)
     minimum_temperature = getMinimumtemperature(temperature1)
-    movingAveragevalue(temperature1,,5)
+    movingAveragevalue(temperature1,5)
     movingAveragevalue(charge_rate1,5)
 
 if __name__ == '__main__':
