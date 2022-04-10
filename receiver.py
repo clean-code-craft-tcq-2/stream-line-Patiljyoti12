@@ -14,6 +14,7 @@ def getDatafromConsoleOutput():
       for i in range(index-1,len(line)):
         charge_rate.append(line[i])
     print(temperature)
+    print(charge_rate)
       
 
 if __name__ == '__main__':
