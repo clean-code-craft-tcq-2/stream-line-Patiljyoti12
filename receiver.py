@@ -17,7 +17,8 @@ def getDatafromConsoleOutput():
     print(temperature)
     print(charge_rate)
     for i in range(len(temperature)):
-      temperature[i] = re.findall(str(temperature[i]))
+      temperature[i] = str(temperature[i])
+      temperature[i] = re.findall(temperature[i])
     print(temperature)
       
 
