@@ -43,6 +43,16 @@ def segregateTemperatureandChargerate(line,temperature,charge_rate):
       charge_rate.append(line[i])
   return temperature,charge_rate
 
+def movingAveragevalue(batteryParameter,windowSize):
+  movingAverage = []
+  index = 0
+  while index < len(batteryParameter)-windowSize+1:
+    window = batteryParameter[index:index+windowSize]
+    windowAverage = round((sum(window)/windowSize),2)
+    movingAverage.append(windowAverage)
+    index = index+1
+  return movingAverage
+
 def getDatafromConsoleOutput():
   for line in sys.stdin:
     temperature = []
@@ -59,6 +69,8 @@ def getDatafromConsoleOutput():
     minimum_charge_rate = getMinimumChargeRate(charge_rate1)
     maximum_temperature = getMaximumtemperature(temperature1)
     minimum_temperature = getMinimumtemperature(temperature1)
-            
+    movingAveragevalue(temperature1)
+    movingAveragevalue(charge_rate1)
+
 if __name__ == '__main__':
   getDatafromConsoleOutput()
