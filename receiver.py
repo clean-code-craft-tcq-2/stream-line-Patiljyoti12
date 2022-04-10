@@ -20,9 +20,7 @@ def getMaximumtemperature(temperature):
 def getDatafromConsoleOutput():
   for line in sys.stdin:
     temperature = []
-    temperature1 = []
     charge_rate = []
-    charge_rate1 = []
     line=line.split(',')
     index=0
     if "temperature" in line[index]:
@@ -34,8 +32,8 @@ def getDatafromConsoleOutput():
     for i in range(len(temperature)):
       temperature[i]=re.findall(r"[-+]?\d*\.\d+|\d+", temperature[i])
       charge_rate[i]=re.findall(r"[-+]?\d*\.\d+|\d+", charge_rate[i])
-    maximum_charge_rate = max(charge_rate1)
-    minimum_charge_rate = min(charge_rate1)
+    maximum_charge_rate = max(charge_rate)
+    minimum_charge_rate = min(charge_rate)
     maximum_temperature = getMaximumtemperature(temperature1)
     minimum_temperature = getMinimumtemperature(temperature1)
     print(maximum_temperature)
