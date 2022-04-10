@@ -3,7 +3,7 @@ import sys
 
 def getDatafromConsoleOutput():
   for line in sys.stdin:
-    print('Ramnath')
+    print(line)
     
 if __name__ == '__main__':
   getDatafromConsoleOutput()
