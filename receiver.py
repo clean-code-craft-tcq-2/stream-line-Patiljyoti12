@@ -34,8 +34,8 @@ def getDatafromConsoleOutput():
     for i in range(len(temperature)):
       temperature1[i] = re.findall(r"[-+]?\d*\.\d+|\d+", temperature[i])
       charge_rate1[i] = re.findall(r"[-+]?\d*\.\d+|\d+", charge_rate[i])
-    maximum_charge_rate = max(charge_rate)
-    minimum_charge_rate = min(charge_rate)
+    maximum_charge_rate = max(charge_rate1)
+    minimum_charge_rate = min(charge_rate1)
     print(maximum_charge_rate)
     print(minimum_charge_rate)
     print(temperature1)
