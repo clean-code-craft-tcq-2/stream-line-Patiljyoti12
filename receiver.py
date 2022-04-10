@@ -5,7 +5,7 @@ def getDatafromConsoleOutput():
   for line in sys.stdin:
     line=line.split(',')
     for charcater in line:
-      if(isalpha(character)):
+      if(character.isalpha()):
         character.split()
         print(character)
         
