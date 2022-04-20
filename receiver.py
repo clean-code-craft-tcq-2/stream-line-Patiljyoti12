@@ -2,6 +2,20 @@ from sender1 import *
 import sys
 import re
 
+class BatteryParameterStatistics:
+  def __init__(self,maximum_temperature,
+                    minimum_temperature,
+                    maximum_charge_rate,
+                    minimum_charge_rate,
+                    movingAveragevalue_temperature
+                    movingAveragevalue_ChargeRate):
+    self.maximum_temperature = maximum_temperature
+    self.minimum_temperature = minimum_temperature
+    self.maximum_charge_rate = maximum_charge_rate
+    self.minimum_charge_rate = minimum_charge_rate
+    self.movingAveragevalue_temperature = movingAveragevalue_temperature
+    self.movingAveragevalue_ChargeRate = movingAveragevalue_ChargeRate
+    
 def getMinimumtemperature(temperature):
   minimum_temperature = temperature[0]
   for index in range(len(temperature)):
@@ -68,12 +82,18 @@ def getDatafromConsoleOutput():
     performOperationsOnBatteryParameters(temperature1,charge_rate1)
     
 def performOperationsOnBatteryParameters(temperature1,charge_rate1):
-    maximum_charge_rate = getMaximumChargeRate(charge_rate1)
-    minimum_charge_rate = getMinimumChargeRate(charge_rate1)
-    maximum_temperature = getMaximumtemperature(temperature1)
-    minimum_temperature = getMinimumtemperature(temperature1)
-    movingAveragevalue_temperature = movingAveragevalue(temperature1,5)
-    movingAveragevalue_ChargeRate = movingAveragevalue(charge_rate1,5)
+  batteryParameterSatistics = BatteryParameterStatistics(getMaximumtemperature(temperature1)
+                                                         getMinimumtemperature(temperature1)
+                                                         getMaximumChargeRate(charge_rate1)
+                                                         getMinimumChargeRate(charge_rate1)
+                                                         movingAveragevalue(temperature1,5)
+                                                         movingAveragevalue(charge_rate1,5))
+  maximum_charge_rate = getMaximumChargeRate(charge_rate1)
+  minimum_charge_rate = getMinimumChargeRate(charge_rate1)
+  maximum_temperature = getMaximumtemperature(temperature1)
+  minimum_temperature = getMinimumtemperature(temperature1)
+  movingAveragevalue_temperature = movingAveragevalue(temperature1,5)
+  movingAveragevalue_ChargeRate = movingAveragevalue(charge_rate1,5)
 
 if __name__ == '__main__':
   getDatafromConsoleOutput()
