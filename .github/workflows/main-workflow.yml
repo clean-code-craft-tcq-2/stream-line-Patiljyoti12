@@ -29,6 +29,11 @@ jobs:
           coverage run --branch sender_test1.py
           coverage html
           coverage report
+          
+          run: |
+          coverage run --branch receiver_test.py
+          coverage html
+          coverage report
       - name: Upload coverage
         uses: actions/upload-artifact@v2
         with:
