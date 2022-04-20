@@ -65,12 +65,15 @@ def getDatafromConsoleOutput():
     charge_rate=filterBatteryParameterValue(charge_rate)
     temperature1 = appendNewListWithFloatValue(temperature,temperature1)
     charge_rate1 = appendNewListWithFloatValue(charge_rate,charge_rate1)
+    performOperationsOnBatteryParameters(temperature1,charge_rate1)
+    
+def performOperationsOnBatteryParameters(temperature1,charge_rate1):
     maximum_charge_rate = getMaximumChargeRate(charge_rate1)
     minimum_charge_rate = getMinimumChargeRate(charge_rate1)
     maximum_temperature = getMaximumtemperature(temperature1)
     minimum_temperature = getMinimumtemperature(temperature1)
-    movingAveragevalue(temperature1,5)
-    movingAveragevalue(charge_rate1,5)
+    movingAveragevalue_temperature = movingAveragevalue(temperature1,5)
+    movingAveragevalue_ChargeRate = movingAveragevalue(charge_rate1,5)
 
 if __name__ == '__main__':
   getDatafromConsoleOutput()
