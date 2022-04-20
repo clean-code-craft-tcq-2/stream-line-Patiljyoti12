@@ -73,15 +73,16 @@ def getDatafromConsoleOutput():
     temperature1 = []
     charge_rate = []
     charge_rate1 = []
+    batteryParameterSatistics = BatteryParameterStatistics
     line=line.split(',')
     temperature,charge_rate = segregateTemperatureandChargerate(line,temperature,charge_rate)
     temperature=filterBatteryParameterValue(temperature)
     charge_rate=filterBatteryParameterValue(charge_rate)
     temperature1 = appendNewListWithFloatValue(temperature,temperature1)
     charge_rate1 = appendNewListWithFloatValue(charge_rate,charge_rate1)
-    performOperationsOnBatteryParameters(temperature1,charge_rate1)
+    performOperationsOnBatteryParameters(batteryParameterSatistics,temperature1,charge_rate1)
     
-def performOperationsOnBatteryParameters(temperature1,charge_rate1):
+def performOperationsOnBatteryParameters(batteryParameterSatistics,temperature1,charge_rate1):
   batteryParameterSatistics = BatteryParameterStatistics(getMaximumtemperature(temperature1),
                                                          getMinimumtemperature(temperature1),
                                                          getMaximumChargeRate(charge_rate1),
