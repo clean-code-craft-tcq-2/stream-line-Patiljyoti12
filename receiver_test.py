@@ -18,8 +18,7 @@ class receiver_test(unittest.TestCase):
     self.assertTrue(receiver.getMaximumChargeRate([40,30,55,50,60])==60)
   
   def test_filterBatteryParameterValue(self):
-    print(receiver.filterBatteryParameterValue(['*12.1/','22.0/','*25.8*','*8.09*','60.0']))
-    self.assertTrue(receiver.filterBatteryParameterValue(['*12.1/','22.0/','*25.8*','*8.09*','60.0'])==[12.1,22.0,25.8,8.09,60.0])
+    self.assertTrue(receiver.filterBatteryParameterValue(['*12.1/','22.0/','*25.8*','*8.09*','60.0'])==[['12.1'],['22.0'],['25.8'],['8.09'],['60.0']])
 
 if __name__ == '__main__':
   unittest.main()
