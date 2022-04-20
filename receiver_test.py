@@ -14,7 +14,7 @@ def test_getMinimumChargeRate(self):
 
 
 def test_getMaximumtemperature(self):
-  self.assertEqual(receiver.getMaximumChargeRate(40,30,55,50,60)==60)
+  self.assertEqual(receiver.getMaximumChargeRate(40,30,55,50,60)==55)
 
 if __name__ == '__main__':
   unittest.main()
