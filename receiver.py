@@ -82,11 +82,11 @@ def getDatafromConsoleOutput():
     performOperationsOnBatteryParameters(temperature1,charge_rate1)
     
 def performOperationsOnBatteryParameters(temperature1,charge_rate1):
-  batteryParameterSatistics = BatteryParameterStatistics(getMaximumtemperature(temperature1)
-                                                         getMinimumtemperature(temperature1)
-                                                         getMaximumChargeRate(charge_rate1)
-                                                         getMinimumChargeRate(charge_rate1)
-                                                         movingAveragevalue(temperature1,5)
+  batteryParameterSatistics = BatteryParameterStatistics(getMaximumtemperature(temperature1),
+                                                         getMinimumtemperature(temperature1),
+                                                         getMaximumChargeRate(charge_rate1),
+                                                         getMinimumChargeRate(charge_rate1),
+                                                         movingAveragevalue(temperature1,5),
                                                          movingAveragevalue(charge_rate1,5))
 
 if __name__ == '__main__':
