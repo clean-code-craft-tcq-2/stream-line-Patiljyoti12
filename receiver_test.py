@@ -26,5 +26,4 @@ class receiver_test(unittest.TestCase):
     self.assertTrue(receiver.movingAveragevalue([40,30,55,50,60],3)==[41.67, 45.0, 55.0])
     
 if __name__ == '__main__':
-  getDatafromConsoleOutput()
   unittest.main()
