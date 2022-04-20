@@ -27,7 +27,7 @@ class receiver_test(unittest.TestCase):
   
   def test_performOperationsOnBatteryParameters(self):
     batteryParameterSatistics = receiver.BatteryParameterSatistics
-    performOperationsOnBatteryParameters(batteryParameterSatistics,[25,30,21,50,60],[40,30,55,50,60])
+    receiver.performOperationsOnBatteryParameters(batteryParameterSatistics,[25,30,21,50,60],[40,30,55,50,60])
 
   def test_getDatafromConsoleOutput(self):
     receiver.getDatafromConsoleOutput()
