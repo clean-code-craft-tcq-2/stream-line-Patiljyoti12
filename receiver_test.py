@@ -20,6 +20,7 @@ class receiver_test(unittest.TestCase):
   def test_appendNewListWithFloatValue(self):
     newList =[]
     receiver.appendNewListWithFloatValue([['12.1'],['22.0'],['25.8'],['8.09'],['60.0']],newList)
+    print(newList)
     self.assertTrue(newList == [22.1,22.0,25.8,8.09,60.0])
     
 if __name__ == '__main__':
