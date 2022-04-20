@@ -23,8 +23,8 @@ class receiver_test(unittest.TestCase):
     self.assertTrue(newList == [12.1,22.0,25.8,8.09,60.0])
   
   def test_movingAveragevalue(self):
-    print(receiver.movingAveragevalue([40,30,55,50,60]))
-    self.assertTrue(receiver.movingAveragevalue([40,30,55,50,60])==[])
+    print(receiver.movingAveragevalue([40,30,55,50,60],3))
+    self.assertTrue(receiver.movingAveragevalue([40,30,55,50,60],3)==[])
     
 if __name__ == '__main__':
   unittest.main()
