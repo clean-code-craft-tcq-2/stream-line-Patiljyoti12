@@ -17,5 +17,4 @@ def test_getMaximumtemperature(self):
   self.assertEqual(receiver.getMaximumChargeRate(40,30,55,50,60)==60)
 
 if __name__ == '__main__':
-  getDatafromConsoleOutput()
   unittest.main()
