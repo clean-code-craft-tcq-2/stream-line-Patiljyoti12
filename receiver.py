@@ -7,7 +7,7 @@ class BatteryParameterStatistics:
                     minimum_temperature,
                     maximum_charge_rate,
                     minimum_charge_rate,
-                    movingAveragevalue_temperature
+                    movingAveragevalue_temperature,
                     movingAveragevalue_ChargeRate):
     self.maximum_temperature = maximum_temperature
     self.minimum_temperature = minimum_temperature
