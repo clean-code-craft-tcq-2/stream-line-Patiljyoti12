@@ -24,7 +24,11 @@ class receiver_test(unittest.TestCase):
   
   def test_movingAveragevalue(self):
     self.assertTrue(receiver.movingAveragevalue([40,30,55,50,60],3)==[41.67, 45.0, 55.0])
-    
+  
+  def test_performOperationsOnBatteryParameters(self):
+    batteryParameterSatistics = receiver.BatteryParameterSatistics
+    performOperationsOnBatteryParameters(batteryParameterSatistics,[25,30,21,50,60],[40,30,55,50,60])
+
   def test_getDatafromConsoleOutput(self):
     receiver.getDatafromConsoleOutput()
     
