@@ -1,4 +1,4 @@
-from receiver import *
+import receiver
 import unittest
 
 class receiver_test(unittest.TestCase):
