@@ -1,7 +1,9 @@
 from sender1 import *
 import sys
 import re
-    
+
+BatteryParameterStatistics = {}
+
 def getMinimumtemperature(temperature):
   minimum_temperature = temperature[0]
   for index in range(len(temperature)):
@@ -68,12 +70,12 @@ def getDatafromConsoleOutput():
     performOperationsOnBatteryParameters(temperature1,charge_rate1)
     
 def performOperationsOnBatteryParameters(temperature1,charge_rate1):
-  maximum_temperature = getMaximumtemperature(temperature1)
-  minimum_temperature = getMinimumtemperature(temperature1)
-  maximum_chargerate = getMaximumChargeRate(charge_rate1)
-  minimum_chargerate = getMinimumChargeRate(charge_rate1)
-  movingAverage_temperarture = movingAveragevalue(temperature1,5)
-  movingAverage_chargerate = movingAveragevalue(charge_rate1,5)
+  BatteryParameterStatistics{'maximum_temperature'} = getMaximumtemperature(temperature1)
+  BatteryParameterStatistics{'minimum_temperature'} = getMinimumtemperature(temperature1)
+  BatteryParameterStatistics{'maximum_chargerate'} = getMaximumChargeRate(charge_rate1)
+  BatteryParameterStatistics{'minimum_chargerate'} = getMinimumChargeRate(charge_rate1)
+  BatteryParameterStatistics{'movingAverage_temperarture'} = movingAveragevalue(temperature1,5)
+  BatteryParameterStatistics{'movingAverage_chargerate'} = movingAveragevalue(charge_rate1,5)
 
 if __name__ == '__main__':
   getDatafromConsoleOutput()
