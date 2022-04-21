@@ -30,8 +30,6 @@ class receiver_test(unittest.TestCase):
     temperature = []
     chargerate = []
     receiver.segregateTemperatureandChargerate(line,temperature,chargerate)
-    print(temperature)
-    print(chargerate)
   
   def test_performOperationsOnBatteryParameters(self):
     receiver.performOperationsOnBatteryParameters([25,30,21,50,60],[40,30,55,50,60],3)
