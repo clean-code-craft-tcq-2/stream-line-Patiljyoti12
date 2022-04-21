@@ -1,13 +1,6 @@
 from sender1 import *
 import sys
 import re
-
-maximum_temperature = 0
-minimum_temperature = 0
-maximum_chargerate = 0
-minimum_chargerate = 0
-movingAverage_temperature = 0
-movingAverage_chargerate = 0
     
 def getMinimumtemperature(temperature):
   minimum_temperature = temperature[0]
