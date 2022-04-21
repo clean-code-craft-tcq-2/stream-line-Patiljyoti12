@@ -22,7 +22,7 @@ if __name__ == '__main__':
    test_celcius_to_Farenheit_convertor([10,20,30,40],[50.0,68.0,86.0,104.0])
    test_generate_samples(20,100,50,50)
    test_charge_rate_readings(20,40,10,10)
-   sender1.display_samples_on_console(20,80,50)
+   print(sender1.display_samples_on_console(20,80,50))#printing to consider as an input for receiver code
   
   
     
