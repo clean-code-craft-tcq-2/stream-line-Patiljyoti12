@@ -27,12 +27,6 @@ class receiver_test(unittest.TestCase):
   
   def test_performOperationsOnBatteryParameters(self):
     receiver.performOperationsOnBatteryParameters([25,30,21,50,60],[40,30,55,50,60])
-    self.assertTrue(receiver.maximum_temperature == 60)
-    self.assertTrue(receiver.minimum_temperature == 21)
-    self.assertTrue(receiver.maximum_chargerate == 60)
-    self.assertTrue(receiver.minimum_chargerate == 30)
-    self.assertTrue(receiver.movingAverage_temperarture == [25.33,33.67,43.67])
-    self.assertTrue(receiver.movingAverage_chargerate == [41.67,45.0,55.0])
 
   def test_getDatafromConsoleOutput(self):
     receiver.getDatafromConsoleOutput()
