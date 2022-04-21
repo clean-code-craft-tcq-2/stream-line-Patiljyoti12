@@ -78,6 +78,7 @@ def performOperationsOnBatteryParameters(temperature1,charge_rate1,window_size):
   BatteryParameterStatistics['minimum_chargerate'] = getMinimumChargeRate(charge_rate1)
   BatteryParameterStatistics['movingAverage_temperarture'] = movingAveragevalue(temperature1,window_size)
   BatteryParameterStatistics['movingAverage_chargerate'] = movingAveragevalue(charge_rate1,window_size)
+  print(BatteryParameterStatistics)
 
 if __name__ == '__main__':
   getDatafromConsoleOutput()
