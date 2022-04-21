@@ -25,6 +25,14 @@ class receiver_test(unittest.TestCase):
   def test_movingAveragevalue(self):
     self.assertTrue(receiver.movingAveragevalue([40,30,55,50,60],3)==[41.67, 45.0, 55.0])
   
+  def test_segregateTemperatureandChargerate(self):
+    line = [['temperature21.07'],['22.08'],['21.08'],['chargerate21.07'],['22.08'],['21.08']]
+    temperature = []
+    chargerate = []
+    receiver.segregateTemperatureandChargerate(line,temperature,chargerate)
+    print(temperature)
+    print(chargerate)
+  
   def test_performOperationsOnBatteryParameters(self):
     receiver.performOperationsOnBatteryParameters([25,30,21,50,60],[40,30,55,50,60],3)
     self.assertTrue(receiver.BatteryParameterStatistics['maximum_temperature'] == 60)
