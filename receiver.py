@@ -69,7 +69,7 @@ def getDatafromConsoleOutput():
     charge_rate=filterBatteryParameterValue(charge_rate)
     temperature1 = appendNewListWithFloatValue(temperature,temperature1)
     charge_rate1 = appendNewListWithFloatValue(charge_rate,charge_rate1)
-    performOperationsOnBatteryParameters(temperature1,charge_rate1)
+    performOperationsOnBatteryParameters(temperature1,charge_rate1,window_size )
     
 def performOperationsOnBatteryParameters(temperature1,charge_rate1,window_size):
   BatteryParameterStatistics['maximum_temperature'] = getMaximumtemperature(temperature1)
