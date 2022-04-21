@@ -31,6 +31,7 @@ class receiver_test(unittest.TestCase):
     self.assertTrue(receiver.BatteryParameterStatistics['minimum_temperature'] == 21)
     self.assertTrue(receiver.BatteryParameterStatistics['maximum_chargerate'] == 60)
     self.assertTrue(receiver.BatteryParameterStatistics['minimum_chargerate'] == 30)
+    print(receiver.movingAveragevalue([25,30,21,50,60],3))
     self.assertTrue(receiver.BatteryParameterStatistics['movingAverage_temperarture'] == [25.33,33.67,43.67])
     self.assertTrue(receiver.BatteryParameterStatistics['movingAverage_chargerate'] == [41.67, 45.0, 55.0])
 
