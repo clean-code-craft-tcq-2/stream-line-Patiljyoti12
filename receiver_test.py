@@ -26,7 +26,7 @@ class receiver_test(unittest.TestCase):
     self.assertTrue(receiver.movingAveragevalue([40,30,55,50,60],3)==[41.67, 45.0, 55.0])
   
   def test_performOperationsOnBatteryParameters(self):
-    batteryParameterStatistics = receiver.BatteryParameterStatistics
+    batteryParameterStatistics = receiver.BatteryParameterStatistics()
     receiver.performOperationsOnBatteryParameters(batteryParameterStatistics,[25,30,21,50,60],[40,30,55,50,60])
     self.assertTrue(batteryParameterStatistics.maximum_temperature == 60)
 
