@@ -26,10 +26,23 @@ class receiver_test(unittest.TestCase):
     self.assertTrue(receiver.movingAveragevalue([40,30,55,50,60],3)==[41.67, 45.0, 55.0])
   
   def test_segregateTemperatureandChargerate(self):
-    line = [['temperature21.07'],['22.08'],['21.08'],['chargerate21.07'],['22.08'],['21.08']]
+    line = [['The temperature readings[172.4', ' 140.0', ' 174.2', ' 75.2', ' 91.4', 
+             ' 150.8', ' 143.6', ' 138.2', ' 87.8', ' 113.0', ' 96.8', ' 125.6', ' 104.0', 
+             ' 132.8', ' 129.2', ' 120.2', ' 118.4', ' 165.2', ' 109.4', ' 95.0', ' 145.4', 
+             ' 89.6', ' 82.4', ' 163.4', ' 105.8', ' 71.6', ' 141.8', ' 161.6', ' 122.0', 
+             ' 123.8', ' 168.8', ' 98.6', ' 149.0', ' 136.4', ' 100.4', ' 80.6', ' 158.0', 
+             ' 159.8', ' 73.4', ' 68.0', ' 84.2', ' 170.6', ' 167.0', ' 131.0', ' 127.4', 
+             ' 156.2', ' 114.8', ' 116.6', ' 78.8', ' 147.2]', 
+             ' and charge_rate readings [27', ' 42', ' 66', ' 40', ' 60', ' 67', ' 73', 
+             ' 77', ' 68', ' 56', ' 38', ' 78', ' 32', ' 44', ' 47', ' 31', ' 21', ' 22', 
+             ' 45', ' 53', ' 30', ' 23', ' 46', ' 76', ' 74', ' 43', ' 25', ' 29', ' 41', 
+             ' 55', ' 62', ' 33', ' 26', ' 51', ' 49', ' 75', ' 39', ' 20', ' 37', ' 63', 
+             ' 64', ' 24', ' 52', ' 48', ' 54', ' 72', ' 61', ' 69', ' 65', ' 59]\n']]
     temperature = []
     chargerate = []
     receiver.segregateTemperatureandChargerate(line,temperature,chargerate)
+    print(temperature)
+    print(chargerate)
   
   def test_performOperationsOnBatteryParameters(self):
     receiver.performOperationsOnBatteryParameters([25,30,21,50,60],[40,30,55,50,60],3)
