@@ -63,6 +63,7 @@ def getDatafromConsoleOutput():
     charge_rate1 = []
     window_size = 5
     line=line.split(',')
+    print(line)
     temperature,charge_rate = segregateTemperatureandChargerate(line,temperature,charge_rate)
     temperature=filterBatteryParameterValue(temperature)
     charge_rate=filterBatteryParameterValue(charge_rate)
